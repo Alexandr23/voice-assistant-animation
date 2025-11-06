@@ -1,0 +1,67 @@
+.controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.instructions {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.status {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.status.recording {
+  color: #ff4444;
+  animation: pulse 1s infinite;
+}
+
+.status.playing {
+  color: #44ff44;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.controls button {
+  background: #4a4a4a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.controls button:hover:not(:disabled) {
+  background: #6a6a6a;
+}
+
+.controls button:disabled {
+  background: #2a2a2a;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.space-hint {
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  font-size: 12px;
+}
+
