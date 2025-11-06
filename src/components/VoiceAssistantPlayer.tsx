@@ -1,14 +1,19 @@
-import { RecordingState } from '../App'
-import './Controls.css'
+import { RecordingState } from '../types'
+import './VoiceAssistantPlayer.css'
 
-interface ControlsProps {
+interface VoiceAssistantPlayerProps {
   recordingState: RecordingState
   hasRecording: boolean
   onPlay: () => void
   onClear: () => void
 }
 
-export default function Controls({ recordingState, hasRecording, onPlay, onClear }: ControlsProps) {
+export default function VoiceAssistantPlayer({
+  recordingState,
+  hasRecording,
+  onPlay,
+  onClear,
+}: VoiceAssistantPlayerProps) {
   const getStatusText = () => {
     switch (recordingState) {
       case 'recording':
